@@ -70,7 +70,7 @@ public class TVController {
         return new ResponseEntity(c,HttpStatus.OK);
     }
     
-    @GetMapping(value = "/tv/find")
+    @GetMapping(value = "/tv/findd")
     public ResponseEntity searchtvByFeatured(@RequestParam("featured") String featured)
     {
         Customized c = new Customized("List of Movies Matching featured "+featured, tvService.searchByFeatured(featured));
