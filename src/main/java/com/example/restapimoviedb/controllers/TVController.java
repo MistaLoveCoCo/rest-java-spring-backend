@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:3000")
 @Controller
 public class TVController {
 
@@ -70,7 +70,7 @@ public class TVController {
         return new ResponseEntity(c,HttpStatus.OK);
     }
     
-    @GetMapping(value = "/tv/findd")
+    @GetMapping(value = "/tv/find")
     public ResponseEntity searchtvByFeatured(@RequestParam("featured") String featured)
     {
         Customized c = new Customized("List of Movies Matching featured "+featured, tvService.searchByFeatured(featured));
