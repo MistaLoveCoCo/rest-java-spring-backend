@@ -37,6 +37,13 @@ public class TVService {
         List<TVSeries> tvFound = mongoTemplate.find(searchQuery, TVSeries.class);
         return tvFound;
     }
+        public List<TVSeries> searchByFeatured(String featured) {
+
+        Query searchQuery = new Query();
+        searchQuery.addCriteria(Criteria.where("featured").regex(featured));
+        List<TVSeries> tvFound = mongoTemplate.find(searchQuery, TVSeries.class);
+        return tvFound;
+    }
 
     public Optional<TVSeries> getTVByID(String ID) throws Exception {
 
