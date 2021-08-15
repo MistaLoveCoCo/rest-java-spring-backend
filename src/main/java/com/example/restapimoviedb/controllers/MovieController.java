@@ -74,4 +74,10 @@ public class MovieController {
         Customized c = new Customized("List of Movies Matching String "+title, movieService.searchByTitle(title));
         return new ResponseEntity(c,HttpStatus.OK);
     }
+    @GetMapping(value = "/movies/find")
+    public ResponseEntity searchMovieByFeatured(@RequestParam("name") String featured)
+    {
+        Customized c = new Customized("List of Movies Matching String "+featured, movieService.searchByFeatured(featured));
+        return new ResponseEntity(c,HttpStatus.OK);
+    }
 }
