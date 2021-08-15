@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Collections;
 
-@CrossOrigin("*")
+@CrossOrigin("")
 @Controller
 public class UserController {
 
