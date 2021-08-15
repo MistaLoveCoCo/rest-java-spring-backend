@@ -11,15 +11,19 @@ public class TVSeries {
     private String title;
     private String description;
     private String rating;
-
+    private String backdrops;
+    private String posters;
+    
     public TVSeries() {
     }
 
-    public TVSeries(String id, String title, String description, String rating) {
+    public TVSeries(String id, String title, String description, String rating, String backdrops, String posters) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.rating = rating;
+        this.backdrops = backdrops;
+        this.posters = posters;
     }
 
     public String getId() {
@@ -53,7 +57,21 @@ public class TVSeries {
     public void setRating(String rating) {
         this.rating = rating;
     }
-
+   
+    public void setBackdrops(String backdrops) {
+        this.backdrops = backdrops;
+    }
+    
+        public String getBackdrops() {
+        return backdrops;
+    }
+    public void setPosters(String posters) {
+        this.posters = posters;
+    }
+    
+        public String getPosters() {
+        return posters;
+    }
     @Override
     public String toString() {
         return "TVSeries{" +
