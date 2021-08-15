@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 import java.util.List;
 
-@CrossOrigin("*")
+@CrossOrigin("https://final-assignment-react.herokuapp.com/")
 
 @RestController
 public class MovieController {
