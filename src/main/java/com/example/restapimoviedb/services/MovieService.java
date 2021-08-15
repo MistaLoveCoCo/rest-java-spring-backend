@@ -37,7 +37,13 @@ public class MovieService {
         List<Movie> movieFound = mongoTemplate.find(searchQuery, Movie.class);
         return movieFound;
     }
+    public List<Movie> searchByFeatured(String featured) {
 
+        Query searchQuery = new Query();
+        searchQuery.addCriteria(Criteria.where("featured").regex(featured));
+        List<Movie> movieFound = mongoTemplate.find(searchQuery, Movie.class);
+        return movieFound;
+    }
     public Optional<Movie> getMoviebyId(String movieId) throws Exception {
 
         Optional<Movie> movie = movieRepository.findById(movieId);
