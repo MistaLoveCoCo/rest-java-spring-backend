@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
-@CrossOrigin("*")
+@CrossOrigin("https://final-assignment-react.herokuapp.com/")
 @Controller
 public class TVController {
 
