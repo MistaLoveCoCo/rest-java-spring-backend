@@ -1,0 +1,66 @@
+package com.example.restapimoviedb.models;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document("tv_series")
+public class TVSeries {
+
+    @Id
+    private String id;
+    private String title;
+    private String description;
+    private String rating;
+
+    public TVSeries() {
+    }
+
+    public TVSeries(String id, String title, String description, String rating) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.rating = rating;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    @Override
+    public String toString() {
+        return "TVSeries{" +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", rating='" + rating + '\'' +
+                '}';
+    }
+}
