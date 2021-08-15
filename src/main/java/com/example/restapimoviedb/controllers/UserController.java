@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.*;
 import java.util.Collections;
 
-@CrossOrigin("*")
+@CrossOrigin("https://final-assignment-react.herokuapp.com/")
 @Controller
 public class UserController {
 
