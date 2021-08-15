@@ -69,4 +69,11 @@ public class TVController {
         Customized c = new Customized("List of Movies Matching String "+title, tvService.searchByTitle(title));
         return new ResponseEntity(c,HttpStatus.OK);
     }
+    
+    @GetMapping(value = "/tv/find")
+    public ResponseEntity searchtvByFeatured(@RequestParam("featured") String featured)
+    {
+        Customized c = new Customized("List of Movies Matching featured "+title, tvService.searchByFeatured(featured));
+        return new ResponseEntity(c,HttpStatus.OK);
+    }
 }
